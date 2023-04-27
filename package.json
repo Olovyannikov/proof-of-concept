@@ -1,0 +1,21 @@
+{
+  "name": "proof-of-concept",
+  "version": "1.0.0",
+  "author": "Olovyannikov Ilya",
+  "license": "MIT",
+  "scripts": {
+    "pre-commit": "cd server && npm run pre-commit && cd ../client && npm run pre-commit",
+    "install-dependencies": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd server && npm run build && cd ../client && npm run build",
+    "start:production": "cd server && npm run start:production && cd ../client && npm run start:production"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit"
+    }
+  },
+  "dependencies": {}
+}
